@@ -1,0 +1,9 @@
+div.box {
+    border: 3px red solid;
+    height: 500px;
+    width: 500px;
+}
+.fallingBox {
+    /* padding-left: 10px; */
+    position: relative;
+}
