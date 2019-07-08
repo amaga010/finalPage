@@ -41,12 +41,11 @@ class TypingGame extends Component {
                     // "top" : "0px"
                 }).appendTo('.box');
                 var test = document.getElementById(index)
-                //console.log(test)
+                console.log(test)
                 // var currentTop = window.getComputedStyle(test, null).top
                 // console.log(currentTop)
-                // if (currentTop !== 0) {
-                //    test.style.top = 0'
-                // }
+                var word = document.getElementsByClassName("fallingBox")
+                console.log(word)
             }, 5000 * index)
         }); 
 
@@ -88,15 +87,8 @@ class TypingGame extends Component {
         var livesLeft = parseInt(lives.innerText)
         var latitude = this.state.position
         var divHeight = 500
-        var position = word.position()
-        console.log(position)
-        // var latitude = function test(){
-        //     if (){
-        //         latitude = this.state.position
-        //     } else {
-        //         latitude = 0
-        //     }
-        // }
+        // console.log(word)
+        // console.log(word[0].style.top)
                 //console.log(test)
                 // var currentTop = window.getComputedStyle(test, null).top
                 // console.log(currentTop)
@@ -105,6 +97,7 @@ class TypingGame extends Component {
                 // }
         // when word enters from the top
         for (var i = 0; i < word.length; i++){
+           // console.log(word)
 
             // $(this.state.wordsArray).each(function(index, value){
             //     var test = document.getElementById(index)
@@ -140,11 +133,11 @@ class TypingGame extends Component {
             //     console.log()
             // }
           //  console.log(index)
-         
             word[i].style.top = latitude + "px"; 
             word[i].style.display = "inline";
             word[i].style.visibility = "visible";
             word[i].style.border = "3px blue solid"
+
             // when word reaches the bottom
             if (latitude > divHeight) { 
                 $(".fallingBox").remove()
